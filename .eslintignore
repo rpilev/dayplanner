@@ -1,0 +1,19 @@
+# Configs
+.eslintrc.js
+webpack.config.js
+
+# Distributables
+dist
+build
+*.bundle.js
+*.js.map
+
+# Version control
+.git
+.history
+
+# Testing
+coverage
+
+# Version control
+yarn-error.log
