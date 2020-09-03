@@ -1,7 +1,5 @@
 import React from 'react'
 
-export const App = (): JSX.Element => (
-  <>
-    <p>React app</p>
-  </>
-)
+import { TasksPage } from '@app/pages'
+
+export const App = (): JSX.Element => <TasksPage />
