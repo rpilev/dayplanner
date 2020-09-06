@@ -8,7 +8,7 @@
     "build": "webpack --env.mode=production",
     "test": "jest --coverage --passWithNoTests",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx && stylelint **/*.css --allow-empty-input",
-    "lint:fix": "eslint . --ext .js,.jsx --fix"
+    "lint:fix": "eslint . --ext .js,.jsx --fix && stylelint **/*.css --fix"
   },
   "keywords": [],
   "author": "",
@@ -28,7 +28,6 @@
     "react-redux": "^7.2.1",
     "redux": "^4.0.5",
     "redux-logger": "^3.0.6",
-    "style-loader": "^1.2.1",
     "tsconfig-paths-jest": "0.0.1",
     "typescript": "^3.9.7"
   },
@@ -69,12 +68,14 @@
     "jest": "^26.2.2",
     "prettier": "^2.0.5",
     "source-map-loader": "^1.0.1",
+    "style-loader": "^1.2.1",
     "stylelint": "^13.6.1",
     "stylelint-config-standard": "^20.0.0",
     "ts-jest": "^26.1.4",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0",
-    "webpack-hot-middleware": "^2.25.0"
+    "webpack-hot-middleware": "^2.25.0",
+    "webpack-merge": "^5.1.3"
   }
 }

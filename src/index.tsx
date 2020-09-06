@@ -6,6 +6,7 @@ import logger from 'redux-logger'
 import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit'
 import { App } from './app'
 import { reducer as tasksReducer } from './pages/tasks/store'
+import './cssReset.css'
 
 const middleware = [...getDefaultMiddleware(), logger]
 const store = configureStore({
