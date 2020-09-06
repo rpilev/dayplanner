@@ -1,5 +1,6 @@
 const webpackConfig = require('./config')
 
-module.exports = process.env.NODE_ENV
-  ? { ...webpackConfig.common, ...webpackConfig.development }
-  : { ...webpackConfig.common, ...webpackConfig.production }
+module.exports = {
+  ...webpackConfig.common,
+  ...(process.env.NODE_ENV ? webpackConfig.development : webpackConfig.production),
+}
