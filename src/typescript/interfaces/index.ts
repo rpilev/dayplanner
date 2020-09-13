@@ -1,1 +1,2 @@
-export * as Interfaces from './task.interfaces'
+export * as TaskInterfaces from './task.interfaces'
+export * as IconInterfaces from './icon.interfaces'

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 
-import { Table } from '@app/components'
+import { TasksTable } from './features'
 
 import { tasksSelector } from './selectors'
 import { getTasks } from './actions'
@@ -14,5 +14,5 @@ export const TasksPage = (): JSX.Element => {
     getTasks(dispatch)
   }, [])
 
-  return <Table tasks={tasks} />
+  return <TasksTable tasks={tasks} />
 }

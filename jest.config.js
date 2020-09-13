@@ -1,12 +1,14 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-disable import/order */
 const tsconfig = require('./tsconfig.json')
+
 const moduleNameMapper = require('tsconfig-paths-jest')(tsconfig)
 
 module.exports = {
   roots: ['<rootDir>/src'],
   transform: {
     '^.+\\.tsx?$': 'ts-jest',
+    '.+\\.(svg)$': 'jest-transform-stub',
   },
   testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(ts|tsx)$',
   testPathIgnorePatterns: ['./src/__tests__/setupEnzyme.ts'],

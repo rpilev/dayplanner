@@ -1,7 +1,8 @@
 export interface Task {
+  id: number
   name: string
   description: string
-  isDone: boolean
+  done: boolean
 }
 
 export interface TasksState {
@@ -10,4 +11,23 @@ export interface TasksState {
 
 export interface RootState {
   tasks: TasksState
+}
+
+export interface Td {
+  center?: boolean
+  fixedWidth?: number
+  oneLine?: boolean
+  multiLine?: boolean
+}
+
+export interface Th {
+  tiny?: boolean
+}
+
+export interface Table {
+  tasks: Task[]
+}
+
+export interface GetTasksResponse {
+  content: [Task]
 }

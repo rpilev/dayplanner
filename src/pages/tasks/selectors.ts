@@ -1,9 +1,9 @@
 import { createSelector } from '@reduxjs/toolkit'
 
-import { Interfaces } from '@typescript/interfaces'
+import { TaskInterfaces } from '@app/typescript/interfaces'
 
 const rootSelector = createSelector(
-  ({ tasks }: Interfaces.RootState) => tasks,
+  ({ tasks }: TaskInterfaces.RootState) => tasks,
   (tasks) => tasks,
 )
 

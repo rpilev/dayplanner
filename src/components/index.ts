@@ -1,1 +1,2 @@
-export { Table } from './table'
+export * as Table from './table'
+export * as Icon from './icon'

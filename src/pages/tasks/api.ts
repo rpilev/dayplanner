@@ -1,5 +1,6 @@
 import axios, { AxiosResponse } from 'axios'
 
-import { Types } from '@typescript/types'
+import { TaskInterfaces } from '@app/typescript/interfaces'
 
-export const getTasks = async (): Promise<AxiosResponse> => axios.get<Types.GetTasksResponse>('/api/task')
+export const getTasks = async (): Promise<AxiosResponse> =>
+  axios.get<TaskInterfaces.GetTasksResponse>('/api/task')

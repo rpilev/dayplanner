@@ -19,15 +19,17 @@
     "paths": {
       "@app/components": ["./src/components"],
       "@app/pages": ["./src/pages"],
-      "@typescript/interfaces": ["./src/typescript/interfaces/"],
-      "@typescript/types": ["./src/typescript/types/"]
-    }
+      "@app/images/svg": ["./src/images/svg"],
+      "@app/typescript/interfaces": ["./src/typescript/interfaces/"]
+    },
+    "types": ["jest"]
   },
   "include": [
     "src",
     "setupEnzyme.ts",
     "jest.config.js",
-    "config"
+    "config",
+    "src/custom.d.ts"
   ],
   "exclude": [
     "node_modules"
