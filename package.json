@@ -1,7 +1,7 @@
 {
-  "name": "pet-project",
+  "name": "dayplanner",
   "version": "1.0.1",
-  "description": "Pet Project",
+  "description": "Dayplanner",
   "main": "./src/index.tsx",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --open --content-base ./public --port 3001",

@@ -1,6 +1,16 @@
-<h1>Pet Project</h1>
+<h1>Dayplanner</h1>
 
-## TODO
+This is a React front-end for a day planner app.
 
-* Add loading
-* Mock server
+<h2>Guide</h2>
+<h5>Install dependencies</h5>
+
+    npm install
+
+<h5>Start development server</h5>
+
+    npm run start
+
+<h5>Run mock server</h5>
+
+    npm run mock-server
