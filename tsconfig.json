@@ -29,7 +29,8 @@
     "setupEnzyme.ts",
     "jest.config.js",
     "config",
-    "src/custom.d.ts"
+    "src/custom.d.ts",
+    "mock-api"
   ],
   "exclude": [
     "node_modules"
