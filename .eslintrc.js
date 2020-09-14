@@ -36,5 +36,13 @@ module.exports = {
     "import/no-extraneous-dependencies": ["off"],
 
     "@typescript-eslint/semi": ['error', 'never'],
+
+    'prettier/prettier': [
+      'error',
+      {
+        endOfLine: 'auto',
+      },
+    ],
+
   },
 };
