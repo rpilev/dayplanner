@@ -1,13 +1,43 @@
-import React, { ReactNode } from 'react'
+import React from 'react'
 import styled, { css } from 'styled-components'
 
-import { TaskInterfaces } from '@app/typescript/interfaces'
+import { Spinner } from '@app/components'
+
+import * as Interfaces from './interfaces'
+import { Icon } from '../icon'
+
+const Wrapper = styled.div`
+  position: relative;
+
+  height: 100%;
+`
+
+const LoadingWrapper = styled.div`
+  display: flex;
+  position: absolute;
+
+  top: 15%;
+  width: 100%;
+
+  justify-content: center;
+`
+
+const Loading = () => (
+  <>
+    <LoadingWrapper data-testid="loading-wrapper">
+      <Spinner>
+        <Icon name="tail-spin" />
+      </Spinner>
+    </LoadingWrapper>
+  </>
+)
 
 const TableWrapper = styled.table`
   width: 100%;
   height: 100%;
 
   border-collapse: collapse;
+  background-color: #8c92a2;
 
   & > thead {
     font-size: 18px;
@@ -25,6 +55,8 @@ const TableWrapper = styled.table`
   }
 
   & > tbody {
+    position: relative;
+
     color: #8c92a2;
 
     & > tr > td {
@@ -42,7 +74,7 @@ const TableWrapper = styled.table`
   }
 `
 
-export const Th = styled.th<TaskInterfaces.Th>`
+export const Th = styled.th<Interfaces.Th>`
   ${({ tiny }) =>
     tiny &&
     css`
@@ -50,7 +82,7 @@ export const Th = styled.th<TaskInterfaces.Th>`
     `}
 `
 
-export const Td = styled.td<TaskInterfaces.Td>`
+export const Td = styled.td<Interfaces.Td>`
   ${({ center }) =>
     center &&
     css`
@@ -83,6 +115,15 @@ export const Td = styled.td<TaskInterfaces.Td>`
     `}
 `
 
-export const Table = ({ children }: { children: ReactNode }): JSX.Element => (
-  <TableWrapper>{children}</TableWrapper>
+export const Table = ({ children, isLoading }: Interfaces.Table): JSX.Element => (
+  <Wrapper>
+    {isLoading ? (
+      <>
+        <TableWrapper>{children}</TableWrapper>
+        <Loading />
+      </>
+    ) : (
+      <TableWrapper>{children}</TableWrapper>
+    )}
+  </Wrapper>
 )

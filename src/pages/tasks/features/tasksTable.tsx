@@ -4,8 +4,8 @@ import TruncateMarkup from 'react-truncate-markup'
 import { TaskInterfaces } from '@app/typescript/interfaces'
 import { Table, Icon } from '@app/components'
 
-export const TasksTable = ({ tasks }: TaskInterfaces.Table): JSX.Element => (
-  <Table.Table>
+export const TasksTable = ({ tasks, isLoading }: TaskInterfaces.TasksTable): JSX.Element => (
+  <Table.Table isLoading={isLoading}>
     <thead>
       <tr>
         <Table.Th>Name:</Table.Th>

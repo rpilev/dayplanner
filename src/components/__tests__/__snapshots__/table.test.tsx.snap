@@ -5,18 +5,84 @@ Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
+      <div
+        class="sc-gtssRu eatTrP"
+      >
+        <table
+          class="sc-hKFyIo gcyqEd"
+        >
+          <thead>
+            <tr>
+              <th
+                class="sc-eCApGN dTTMDE"
+              >
+                Title 1
+              </th>
+              <th
+                class="sc-eCApGN dTTMDE"
+              >
+                Title 2
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td
+                class="sc-jSFkmK fZFjzH"
+              >
+                column1 value 1
+              </td>
+              <td
+                class="sc-jSFkmK fZFjzH"
+              >
+                column2 value 1
+              </td>
+            </tr>
+            <tr>
+              <td
+                class="sc-jSFkmK fZFjzH"
+              >
+                column1 value 2
+              </td>
+              <td
+                class="sc-jSFkmK fZFjzH"
+              >
+                column2 value 2
+              </td>
+            </tr>
+            <tr>
+              <td
+                class="sc-jSFkmK fZFjzH"
+              >
+                column1 value 3
+              </td>
+              <td
+                class="sc-jSFkmK fZFjzH"
+              >
+                column2 value 3
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="sc-gtssRu eatTrP"
+    >
       <table
-        class="sc-bdnylx geRHdX"
+        class="sc-hKFyIo gcyqEd"
       >
         <thead>
           <tr>
             <th
-              class="sc-gtssRu lbqNjK"
+              class="sc-eCApGN dTTMDE"
             >
               Title 1
             </th>
             <th
-              class="sc-gtssRu lbqNjK"
+              class="sc-eCApGN dTTMDE"
             >
               Title 2
             </th>
@@ -25,36 +91,36 @@ Object {
         <tbody>
           <tr>
             <td
-              class="sc-dlnjPT kqlUpZ"
+              class="sc-jSFkmK fZFjzH"
             >
               column1 value 1
             </td>
             <td
-              class="sc-dlnjPT kqlUpZ"
+              class="sc-jSFkmK fZFjzH"
             >
               column2 value 1
             </td>
           </tr>
           <tr>
             <td
-              class="sc-dlnjPT kqlUpZ"
+              class="sc-jSFkmK fZFjzH"
             >
               column1 value 2
             </td>
             <td
-              class="sc-dlnjPT kqlUpZ"
+              class="sc-jSFkmK fZFjzH"
             >
               column2 value 2
             </td>
           </tr>
           <tr>
             <td
-              class="sc-dlnjPT kqlUpZ"
+              class="sc-jSFkmK fZFjzH"
             >
               column1 value 3
             </td>
             <td
-              class="sc-dlnjPT kqlUpZ"
+              class="sc-jSFkmK fZFjzH"
             >
               column2 value 3
             </td>
@@ -62,64 +128,6 @@ Object {
         </tbody>
       </table>
     </div>
-  </body>,
-  "container": <div>
-    <table
-      class="sc-bdnylx geRHdX"
-    >
-      <thead>
-        <tr>
-          <th
-            class="sc-gtssRu lbqNjK"
-          >
-            Title 1
-          </th>
-          <th
-            class="sc-gtssRu lbqNjK"
-          >
-            Title 2
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td
-            class="sc-dlnjPT kqlUpZ"
-          >
-            column1 value 1
-          </td>
-          <td
-            class="sc-dlnjPT kqlUpZ"
-          >
-            column2 value 1
-          </td>
-        </tr>
-        <tr>
-          <td
-            class="sc-dlnjPT kqlUpZ"
-          >
-            column1 value 2
-          </td>
-          <td
-            class="sc-dlnjPT kqlUpZ"
-          >
-            column2 value 2
-          </td>
-        </tr>
-        <tr>
-          <td
-            class="sc-dlnjPT kqlUpZ"
-          >
-            column1 value 3
-          </td>
-          <td
-            class="sc-dlnjPT kqlUpZ"
-          >
-            column2 value 3
-          </td>
-        </tr>
-      </tbody>
-    </table>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

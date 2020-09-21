@@ -1,16 +1,27 @@
 /* eslint-disable no-param-reassign */
-import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 
-import { TaskInterfaces } from '@app/typescript/interfaces'
+import { getTasks } from './api'
+import { TaskState } from '../../typescript/interfaces/task.interfaces'
 
-export const { reducer, actions } = createSlice({
-  name: 'tasks',
-  initialState: {
-    list: [],
-  },
-  reducers: {
-    setTasksList: (state, { payload }: PayloadAction<[TaskInterfaces.Task]>) => {
-      state.list = payload
-    },
+export const getTasksList = createAsyncThunk('task/getTasksList', getTasks)
+
+const initialState: TaskState = {
+  list: [],
+  loading: false,
+}
+
+export const { reducer } = createSlice({
+  reducers: {},
+  name: 'task',
+  initialState,
+  extraReducers: (builder) => {
+    builder.addCase(getTasksList.pending, (state) => {
+      state.loading = true
+    })
+    builder.addCase(getTasksList.fulfilled, (state, { payload: { content } }) => {
+      state.list = content
+      state.loading = false
+    })
   },
 })

@@ -1,5 +1,5 @@
 import React from 'react'
-import { render } from '@testing-library/react'
+import { cleanup, render } from '@testing-library/react'
 
 import { Table } from '@app/components'
 
@@ -31,9 +31,11 @@ beforeEach(() => {
   ]
 })
 
+afterEach(cleanup)
+
 describe('Table', () => {
   test('should render correctly', () => {
-    const IconRender = render(
+    const TableRender = render(
       <Table.Table>
         <thead>
           <tr>
@@ -52,7 +54,18 @@ describe('Table', () => {
       </Table.Table>,
     )
 
-    expect(IconRender).toBeDefined()
-    expect(IconRender).toMatchSnapshot()
+    expect(TableRender).toBeDefined()
+    expect(TableRender).toMatchSnapshot()
+  })
+
+  test('should show loading wrapper when loading', () => {
+    const { getByTestId } = render(
+      <Table.Table isLoading>
+        <thead />
+        <tbody />
+      </Table.Table>,
+    )
+
+    expect(getByTestId('loading-wrapper')).toBeTruthy()
   })
 })

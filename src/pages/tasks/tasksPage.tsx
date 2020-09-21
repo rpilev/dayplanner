@@ -3,16 +3,17 @@ import { useSelector, useDispatch } from 'react-redux'
 
 import { TasksTable } from './features'
 
-import { tasksSelector } from './selectors'
-import { getTasks } from './actions'
+import { loadingSelector, tasksSelector } from './selectors'
+import { getTasksList } from './store'
 
 export const TasksPage = (): JSX.Element => {
   const tasks = useSelector(tasksSelector)
+  const loading = useSelector(loadingSelector)
   const dispatch = useDispatch()
 
   useEffect(() => {
-    getTasks(dispatch)
+    dispatch(getTasksList())
   }, [])
 
-  return <TasksTable tasks={tasks} />
+  return <TasksTable isLoading={loading} tasks={tasks} />
 }

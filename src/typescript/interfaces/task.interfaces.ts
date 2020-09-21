@@ -5,29 +5,20 @@ export interface Task {
   done: boolean
 }
 
-export interface TasksState {
+export interface TaskState {
   list: Task[]
+  loading: boolean
 }
 
 export interface RootState {
-  tasks: TasksState
-}
-
-export interface Td {
-  center?: boolean
-  fixedWidth?: number
-  oneLine?: boolean
-  multiLine?: boolean
-}
-
-export interface Th {
-  tiny?: boolean
-}
-
-export interface Table {
-  tasks: Task[]
+  task: TaskState
 }
 
 export interface GetTasksResponse {
   content: [Task]
+}
+
+export interface TasksTable {
+  tasks: Task[]
+  isLoading?: boolean
 }
