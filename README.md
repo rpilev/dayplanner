@@ -14,3 +14,7 @@ This is a React front-end for a day planner app.
 <h5>Run mock server</h5>
 
     npm run mock-server
+
+## TODO
+
+* Fix Table.Table semantics
