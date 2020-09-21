@@ -14,17 +14,21 @@ export const TasksTable = ({ tasks, isLoading }: TaskInterfaces.TasksTable): JSX
       </tr>
     </thead>
     <tbody>
-      {tasks.map(({ name, description, done, id }) => (
-        <tr key={id}>
-          <Table.Td fixedWidth={100}>{name}</Table.Td>
-          <Table.Td multiLine>
-            <TruncateMarkup lines={3}>
-              <p>{description}</p>
-            </TruncateMarkup>
-          </Table.Td>
-          <Table.Td center>{done && <Icon.Icon name="green-check" size="sm" />}</Table.Td>
-        </tr>
-      ))}
+      {tasks.length ? (
+        tasks.map(({ name, description, done, id }) => (
+          <tr key={id}>
+            <Table.Td fixedWidth={100}>{name}</Table.Td>
+            <Table.Td multiLine>
+              <TruncateMarkup lines={3}>
+                <p>{description}</p>
+              </TruncateMarkup>
+            </Table.Td>
+            <Table.Td center>{done && <Icon.Icon name="green-check" size="sm" />}</Table.Td>
+          </tr>
+        ))
+      ) : (
+        <tr> </tr>
+      )}
     </tbody>
   </Table.Table>
 )

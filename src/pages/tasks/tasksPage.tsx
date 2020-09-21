@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { TasksTable } from './features'
 
 import { loadingSelector, tasksSelector } from './selectors'
-import { getTasksList } from './store'
+import { getTasksList} from './store'
 
 export const TasksPage = (): JSX.Element => {
   const tasks = useSelector(tasksSelector)

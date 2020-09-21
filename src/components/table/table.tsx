@@ -32,9 +32,13 @@ const Loading = () => (
   </>
 )
 
-const TableWrapper = styled.table`
+const TableWrapper = styled.table<Interfaces.TableWrapper>`
   width: 100%;
-  height: 100%;
+  ${({ fullHeight }) =>
+    fullHeight &&
+    css`
+      height: 100%;
+    `}
 
   border-collapse: collapse;
   background-color: #8c92a2;
@@ -115,15 +119,9 @@ export const Td = styled.td<Interfaces.Td>`
     `}
 `
 
-export const Table = ({ children, isLoading }: Interfaces.Table): JSX.Element => (
+export const Table = ({ children, isLoading, fullHeight }: Interfaces.Table): JSX.Element => (
   <Wrapper>
-    {isLoading ? (
-      <>
-        <TableWrapper>{children}</TableWrapper>
-        <Loading />
-      </>
-    ) : (
-      <TableWrapper>{children}</TableWrapper>
-    )}
+    <TableWrapper fullHeight={fullHeight}>{children}</TableWrapper>
+    {isLoading && <Loading />}
   </Wrapper>
 )
